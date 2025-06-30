@@ -36,19 +36,187 @@
         <!-- Sidebar -->
         <aside class="w-[30%] max-w-xs bg-white border-r border-gray-200 overflow-y-auto">
             <nav class="p-6">
-                <h2 class="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-4">Components</h2>
-                <ul class="space-y-2">
-                    <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md font-medium">Accordion</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Badge</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Card</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Dialog</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Dropdown</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Form</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Grid</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Header</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Input</a></li>
-                    <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Tabs</a></li>
+                <!-- Section Navigation -->
+                <div class="border-b border-gray-200 mb-6">
+                    <div class="flex w-full">
+                        <button id="docs-tab" class="flex-1 px-1 py-4 text-sm font-medium text-gray-900 border-b-2 border-gray-900 text-center">
+                            Docs
+                        </button>
+                        <button id="usage-tab" class="flex-1 px-1 py-4 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent text-center">
+                            Usage
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Docs View -->
+                <div id="docs-view">
+                <ul class="space-y-2 mb-8">
+                    <li>
+                        <button id="br-press-tab" class="w-full flex items-center px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md font-bold">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2z"/>
+                            </svg>
+                            BR Press
+                        </button>
+                    </li>
+                    <li>
+                        <button id="fantasia-tab" class="w-full flex items-center px-4 py-2 text-gray-500 hover:bg-gray-100 rounded-md font-bold">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                            </svg>
+                            Fantasia
+                        </button>
+                    </li>
                 </ul>
+
+                <!-- BR Press Components -->
+                <div id="br-press-content">
+                    <h2 class="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-4">Components</h2>
+                    <ul class="space-y-2">
+                            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors">Block Quote</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors">List</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors">Key Takeaways</a></li>
+                            <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md transition-colors">Callout</a></li>
+                    </ul>
+                </div>
+
+                <!-- Fantasia Components -->
+                <div id="fantasia-content" class="hidden">
+                    <h2 class="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-4">Components</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md font-medium">Accordion</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Badge</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Card</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Dialog</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Dropdown</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Form</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Grid</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Header</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Input</a></li>
+                        <li><a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md">Tabs</a></li>
+                    </ul>
+                    </div>
+                </div>
+
+                <!-- Usage View -->
+                <div id="usage-view" class="hidden">
+                    <ul class="space-y-2 mb-8">
+                        <li>
+                            <button id="br-press-tab-usage" class="w-full flex items-center px-4 py-2 text-gray-800 hover:bg-gray-100 rounded-md font-bold">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v12a2 2 0 01-2 2z"/>
+                                </svg>
+                                BR Press
+                            </button>
+                        </li>
+                        <li>
+                            <button id="fantasia-tab-usage" class="w-full flex items-center px-4 py-2 text-gray-500 hover:bg-gray-100 rounded-md font-bold">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+                                </svg>
+                                Fantasia
+                            </button>
+                        </li>
+                    </ul>
+
+                    <!-- BR Press Components with Usage -->
+                    <div id="br-press-content-usage">
+                        <h2 class="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-4">Components</h2>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Block Quote</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">125</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>List</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">89</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Key Takeaways</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">67</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Callout</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">45</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Fantasia Components with Usage -->
+                    <div id="fantasia-content-usage" class="hidden">
+                        <h2 class="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-4">Components</h2>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Accordion</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">234</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Badge</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">156</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Card</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">198</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Dialog</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">87</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Dropdown</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">145</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Form</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">167</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Grid</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">89</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Header</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">123</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Input</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">178</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-md flex justify-between items-center">
+                                    <span>Tabs</span>
+                                    <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">92</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
         </aside>
 
@@ -57,21 +225,394 @@
             <div class="flex">
                 <!-- Documentation Content -->
                 <div class="flex-1 p-8 max-w-4xl">
-                    <h1 class="text-4xl font-bold text-gray-900 mb-8">Accordion</h1>
+                    <!-- BR Press Directory Page (Usage) -->
+                    <div id="br-press-directory-usage" class="hidden">
+                        <h1 class="text-3xl font-bold text-gray-900 mb-8">BR Press Components</h1>
+                        <p class="text-gray-600 mb-8">Explore component usage across our platform.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Block Quote Card -->
+                            <a href="#" class="group block">
+                                <div class="border rounded-lg overflow-hidden transition-shadow hover:shadow-md">
+                                    <div class="h-48 bg-gray-50 p-4 border-b">
+                                        <!-- Low fidelity preview -->
+                                        <div class="w-full h-full flex items-center justify-center">
+                                            <div class="w-full">
+                                                <div class="border-l-4 border-gray-300 pl-4 py-3">
+                                                    <div class="h-2 bg-gray-200 rounded w-3/4 mb-2"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-1/2"></div>
+                                                    <div class="mt-2 h-2 bg-gray-100 rounded w-1/4"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex justify-between items-center">
+                                        <h3 class="text-gray-900 font-medium group-hover:text-gray-600 transition-colors">Block Quote</h3>
+                                        <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">125</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- List Card -->
+                            <a href="#" class="group block">
+                                <div class="border rounded-lg overflow-hidden transition-shadow hover:shadow-md">
+                                    <div class="h-48 bg-gray-50 p-4 border-b">
+                                        <!-- Low fidelity preview -->
+                                        <div class="w-full h-full flex items-center justify-center">
+                                            <div class="w-full space-y-3">
+                                                <div class="flex items-center">
+                                                    <div class="h-2 w-2 rounded-full bg-gray-300 mr-3"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-2/3"></div>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="h-2 w-2 rounded-full bg-gray-300 mr-3"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-3/4"></div>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="h-2 w-2 rounded-full bg-gray-300 mr-3"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-1/2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex justify-between items-center">
+                                        <h3 class="text-gray-900 font-medium group-hover:text-gray-600 transition-colors">List</h3>
+                                        <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">89</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- Key Takeaways Card -->
+                            <a href="#" class="group block">
+                                <div class="border rounded-lg overflow-hidden transition-shadow hover:shadow-md">
+                                    <div class="h-48 bg-gray-50 p-4 border-b">
+                                        <!-- Low fidelity preview -->
+                                        <div class="w-full h-full flex items-center justify-center">
+                                            <div class="w-full">
+                                                <div class="h-2 bg-gray-300 rounded w-1/3 mb-4"></div>
+                                                <div class="space-y-2">
+                                                    <div class="h-2 bg-gray-200 rounded w-full"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-5/6"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-4/6"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex justify-between items-center">
+                                        <h3 class="text-gray-900 font-medium group-hover:text-gray-600 transition-colors">Key Takeaways</h3>
+                                        <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">67</span>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- Callout Card -->
+                            <a href="#" class="group block">
+                                <div class="border rounded-lg overflow-hidden transition-shadow hover:shadow-md">
+                                    <div class="h-48 bg-gray-50 p-4 border-b">
+                                        <!-- Low fidelity preview -->
+                                        <div class="w-full h-full flex items-center justify-center">
+                                            <div class="w-full border-l-4 border-gray-300 bg-gray-100 p-4">
+                                                <div class="h-2 bg-gray-400 rounded w-1/4 mb-3"></div>
+                                                <div class="space-y-2">
+                                                    <div class="h-2 bg-gray-300 rounded w-full"></div>
+                                                    <div class="h-2 bg-gray-300 rounded w-4/5"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-4 flex justify-between items-center">
+                                        <h3 class="text-gray-900 font-medium group-hover:text-gray-600 transition-colors">Callout</h3>
+                                        <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full">45</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Block Quote Usage Stats -->
+                    <div id="blockquote-usage" class="hidden">
+                        <h1 class="text-3xl font-bold text-gray-900 mb-4">Block Quote Usage</h1>
+                        
+                        <div class="bg-white rounded-lg border border-gray-200 mb-8">
+                            <div class="p-6">
+                                <div class="flex items-center justify-between mb-6">
+                                    <div>
+                                        <h2 class="text-xl font-semibold text-gray-800">Usage Statistics</h2>
+                                        <p class="text-gray-600 mt-1">Total instances: 125</p>
+                                    </div>
+                                    <div class="bg-gray-100 px-4 py-2 rounded-full">
+                                        <span class="text-gray-700 font-medium">Last updated: Today</span>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-8">
+                                    <!-- Column 1 -->
+                                    <div>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/credit-cards/best-rewards-cards</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/mortgages/30-year-rates</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/investing/best-brokers</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/banking/high-yield-savings</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/credit-cards/balance-transfer</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/personal-loans/debt-consolidation</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/insurance/life/term-vs-whole</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/credit-cards/airline-miles</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/mortgages/refinance-calculator</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/banking/cd-rates</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 2 -->
+                                    <div>
+                                        <ul class="space-y-3">
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/investing/retirement/roth-ira</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/credit-cards/cash-back</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/mortgages/fha-loans</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/banking/money-market</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/credit-cards/business</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/investing/best-robo-advisors</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/insurance/auto/best-companies</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/mortgages/va-loans</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/banking/checking-accounts</a></li>
+                                            <li><a href="#" class="text-blue-600 hover:text-blue-800 hover:underline">/credit-cards/secured</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Pagination -->
+                                <div class="mt-8 flex items-center justify-between border-t border-gray-200 pt-6">
+                                    <div class="flex items-center">
+                                        <p class="text-sm text-gray-700">
+                                            Showing <span class="font-medium">1</span> to <span class="font-medium">20</span> of <span class="font-medium">125</span> results
+                                        </p>
+                                    </div>
+                                    <div class="flex items-center space-x-2">
+                                        <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                                            Previous
+                                        </button>
+                                        <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                                            1
+                                        </button>
+                                        <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                                            2
+                                        </button>
+                                        <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                                            3
+                                        </button>
+                                        <span class="px-2 text-gray-500">...</span>
+                                        <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                                            7
+                                        </button>
+                                        <button class="px-3 py-1 border border-gray-300 rounded-md text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                                            Next
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BR Press Directory Page -->
+                    <div id="br-press-directory" class="hidden">
+                        <h1 class="text-3xl font-bold text-gray-900 mb-8">BR Press Components</h1>
+                        <p class="text-gray-600 mb-8">Explore our collection of components designed for creating beautiful and engaging content.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            <!-- Block Quote Card -->
+                            <a href="#" class="group block">
+                                <div class="border rounded-lg overflow-hidden transition-shadow hover:shadow-md">
+                                    <div class="h-48 bg-gray-50 p-4 border-b">
+                                        <!-- Low fidelity preview -->
+                                        <div class="w-full h-full flex items-center justify-center">
+                                            <div class="w-full">
+                                                <div class="border-l-4 border-gray-300 pl-4 py-3">
+                                                    <div class="h-2 bg-gray-200 rounded w-3/4 mb-2"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-1/2"></div>
+                                                    <div class="mt-2 h-2 bg-gray-100 rounded w-1/4"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <h3 class="text-gray-900 font-medium group-hover:text-gray-600 transition-colors">Block Quote</h3>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- List Card -->
+                            <a href="#" class="group block">
+                                <div class="border rounded-lg overflow-hidden transition-shadow hover:shadow-md">
+                                    <div class="h-48 bg-gray-50 p-4 border-b">
+                                        <!-- Low fidelity preview -->
+                                        <div class="w-full h-full flex items-center justify-center">
+                                            <div class="w-full space-y-3">
+                                                <div class="flex items-center">
+                                                    <div class="h-2 w-2 rounded-full bg-gray-300 mr-3"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-2/3"></div>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="h-2 w-2 rounded-full bg-gray-300 mr-3"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-3/4"></div>
+                                                </div>
+                                                <div class="flex items-center">
+                                                    <div class="h-2 w-2 rounded-full bg-gray-300 mr-3"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-1/2"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <h3 class="text-gray-900 font-medium group-hover:text-gray-600 transition-colors">List</h3>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- Key Takeaways Card -->
+                            <a href="#" class="group block">
+                                <div class="border rounded-lg overflow-hidden transition-shadow hover:shadow-md">
+                                    <div class="h-48 bg-gray-50 p-4 border-b">
+                                        <!-- Low fidelity preview -->
+                                        <div class="w-full h-full flex items-center justify-center">
+                                            <div class="w-full">
+                                                <div class="h-2 bg-gray-300 rounded w-1/3 mb-4"></div>
+                                                <div class="space-y-2">
+                                                    <div class="h-2 bg-gray-200 rounded w-full"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-5/6"></div>
+                                                    <div class="h-2 bg-gray-200 rounded w-4/6"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <h3 class="text-gray-900 font-medium group-hover:text-gray-600 transition-colors">Key Takeaways</h3>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <!-- Callout Card -->
+                            <a href="#" class="group block">
+                                <div class="border rounded-lg overflow-hidden transition-shadow hover:shadow-md">
+                                    <div class="h-48 bg-gray-50 p-4 border-b">
+                                        <!-- Low fidelity preview -->
+                                        <div class="w-full h-full flex items-center justify-center">
+                                            <div class="w-full border-l-4 border-gray-300 bg-gray-100 p-4">
+                                                <div class="h-2 bg-gray-400 rounded w-1/4 mb-3"></div>
+                                                <div class="space-y-2">
+                                                    <div class="h-2 bg-gray-300 rounded w-full"></div>
+                                                    <div class="h-2 bg-gray-300 rounded w-4/5"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="p-4">
+                                        <h3 class="text-gray-900 font-medium group-hover:text-gray-600 transition-colors">Callout</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Block Quote Documentation -->
+                    <div id="blockquote-docs" class="hidden">
+                        <h1 class="text-4xl font-bold text-gray-900 mb-8">Block Quote</h1>
+                        
+                        <!-- Decorative Blockquote Sandbox -->
+                        <div class="mb-12 bg-gray-50 p-8 rounded-lg border border-gray-200">
+                            <div class="flex justify-between items-center mb-6">
+                                <h2 class="text-xl font-semibold text-gray-800">Decorative Variant</h2>
+                                <button id="copy-shortcode-decorative" class="flex items-center px-3 py-2 bg-gray-200 hover:bg-gray-300 rounded-md text-sm font-medium text-gray-700 transition-colors duration-200">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-12a2 2 0 00-2-2h-2M8 5a2 2 0 002 2h4a2 2 0 002-2M8 5a2 2 0 012-2h4a2 2 0 012 2"/>
+                                    </svg>
+                                    <span id="copy-text-decorative">Copy shortcode</span>
+                                </button>
+                            </div>
+                            <div>
+                                <blockquote class="relative pl-10 py-4 italic text-gray-700">
+                                    <svg class="absolute top-0 left-0 h-8 w-8 text-gray-300 transform -translate-x-3 -translate-y-2" fill="currentColor" viewBox="0 0 32 32">
+                                        <path d="M9.352 4C4.456 7.456 1 13.12 1 19.36c0 5.088 3.072 8.064 6.624 8.064 3.36 0 5.856-2.688 5.856-5.856 0-3.168-2.208-5.472-5.088-5.472-.576 0-1.344.096-1.536.192.48-3.264 3.552-7.104 6.624-9.024L9.352 4zm16.512 0c-4.8 3.456-8.256 9.12-8.256 15.36 0 5.088 3.072 8.064 6.624 8.064 3.264 0 5.856-2.688 5.856-5.856 0-3.168-2.304-5.472-5.184-5.472-.576 0-1.248.096-1.44.192.48-3.264 3.456-7.104 6.528-9.024L25.864 4z"/>
+                                    </svg>
+                                    "Your time is limited, don't waste it living someone else's life."
+                                    <footer class="mt-2 text-sm text-gray-600">— Steve Jobs</footer>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Default Blockquote Sandbox -->
+                        <div class="mb-12 bg-gray-50 p-8 rounded-lg border border-gray-200">
+                            <div class="flex justify-between items-center mb-6">
+                                <h2 class="text-xl font-semibold text-gray-800">Default Variant</h2>
+                                <button id="copy-shortcode-default" class="flex items-center px-3 py-2 bg-gray-200 hover:bg-gray-300 rounded-md text-sm font-medium text-gray-700 transition-colors duration-200">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-12a2 2 0 00-2-2h-2M8 5a2 2 0 002 2h4a2 2 0 002-2M8 5a2 2 0 012-2h4a2 2 0 012 2"/>
+                                    </svg>
+                                    <span id="copy-text-default">Copy shortcode</span>
+                                </button>
+                            </div>
+                            <div>
+                                <blockquote class="border-l-4 border-gray-800 pl-4 py-2 text-gray-700">
+                                    "The only way to do great work is to love what you do."
+                                    <footer class="mt-2 text-sm text-gray-600">— Steve Jobs</footer>
+                                </blockquote>
+                            </div>
+                        </div>
+
+                        <!-- Styled Blockquote Sandbox -->
+                        <div class="mb-12 bg-gray-50 p-8 rounded-lg border border-gray-200">
+                            <div class="flex justify-between items-center mb-6">
+                                <h2 class="text-xl font-semibold text-gray-800">Styled Variant</h2>
+                                <button id="copy-shortcode-styled" class="flex items-center px-3 py-2 bg-gray-200 hover:bg-gray-300 rounded-md text-sm font-medium text-gray-700 transition-colors duration-200">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-12a2 2 0 00-2-2h-2M8 5a2 2 0 002 2h4a2 2 0 002-2M8 5a2 2 0 012-2h4a2 2 0 012 2"/>
+                                    </svg>
+                                    <span id="copy-text-styled">Copy shortcode</span>
+                                </button>
+                            </div>
+                            <div>
+                                <blockquote class="bg-gray-100 border-l-4 border-blue-500 pl-4 py-4 pr-4 rounded-r text-gray-700">
+                                    "Innovation distinguishes between a leader and a follower."
+                                    <footer class="mt-2 text-sm text-blue-600">— Steve Jobs</footer>
+                                </blockquote>
+                            </div>
+                        </div>
                     
                     <div id="overview" class="mb-12">
                         <h2 class="text-2xl font-semibold text-gray-800 mb-4">Overview</h2>
-                        <p class="text-gray-600">The Accordion component allows users to expand and collapse content sections, perfect for FAQs or content organization.</p>
+                            <p class="text-gray-600 mb-4">The Block Quote component is designed to highlight and emphasize quoted content in your documents. It provides various styles and customization options to make your quotes stand out while maintaining readability and visual hierarchy.</p>
+                        <p class="text-gray-600">Key features include:</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 mt-4">
+                                <li>Multiple styling options</li>
+                                <li>Support for attribution/citations</li>
+                                <li>Decorative elements (borders, icons)</li>
+                                <li>Responsive design</li>
+                                <li>Customizable through CSS variables</li>
+                        </ul>
+                    </div>
+
+                    <div id="installation" class="mb-12">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Installation</h2>
+                            <p class="text-gray-600 mb-4">Install the blockquote component using your preferred package manager:</p>
+                            <pre class="bg-gray-100 p-4 rounded-lg mb-4"><code>npm install @brpress/blockquote
+# or
+yarn add @brpress/blockquote</code></pre>
+                        <p class="text-gray-600">Then import the component into your project:</p>
+                            <pre class="bg-gray-100 p-4 rounded-lg"><code>import { BlockQuote } from '@brpress/blockquote';</code></pre>
                     </div>
 
                     <div id="usage" class="mb-12">
                         <h2 class="text-2xl font-semibold text-gray-800 mb-4">Usage</h2>
-                        <pre class="bg-gray-100 p-4 rounded-lg"><code>&lt;accordion&gt;
-    &lt;accordion-item&gt;
-        &lt;h3&gt;Section 1&lt;/h3&gt;
-        &lt;p&gt;Content here...&lt;/p&gt;
-    &lt;/accordion-item&gt;
-&lt;/accordion&gt;</code></pre>
+                            <p class="text-gray-600 mb-4">Basic usage of the blockquote component:</p>
+                            <pre class="bg-gray-100 p-4 rounded-lg mb-6"><code>&lt;BlockQuote
+    content="The only way to do great work is to love what you do."
+    author="Steve Jobs"
+/&gt;</code></pre>
+                            <p class="text-gray-600">With custom styling:</p>
+                            <pre class="bg-gray-100 p-4 rounded-lg"><code>&lt;BlockQuote
+    content="Innovation distinguishes between a leader and a follower."
+    author="Steve Jobs"
+    variant="styled"
+    borderColor="blue-500"
+    backgroundColor="gray-100"
+/&gt;</code></pre>
                     </div>
 
                     <div id="props" class="mb-12">
@@ -82,36 +623,108 @@
                                     <th class="py-4 px-6 bg-gray-50">Prop</th>
                                     <th class="py-4 px-6 bg-gray-50">Type</th>
                                     <th class="py-4 px-6 bg-gray-50">Default</th>
+                                    <th class="py-4 px-6 bg-gray-50">Description</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="border-b">
-                                    <td class="py-4 px-6">expanded</td>
-                                    <td class="py-4 px-6">boolean</td>
-                                    <td class="py-4 px-6">false</td>
+                                        <td class="py-4 px-6">content</td>
+                                        <td class="py-4 px-6">string</td>
+                                        <td class="py-4 px-6">required</td>
+                                        <td class="py-4 px-6">The quote text content</td>
+                                </tr>
+                                <tr class="border-b">
+                                        <td class="py-4 px-6">author</td>
+                                        <td class="py-4 px-6">string</td>
+                                    <td class="py-4 px-6">undefined</td>
+                                        <td class="py-4 px-6">Attribution for the quote</td>
+                                </tr>
+                                <tr class="border-b">
+                                        <td class="py-4 px-6">variant</td>
+                                        <td class="py-4 px-6">'default' | 'styled' | 'decorative'</td>
+                                        <td class="py-4 px-6">'default'</td>
+                                        <td class="py-4 px-6">Visual style variant</td>
+                                </tr>
+                                <tr class="border-b">
+                                        <td class="py-4 px-6">className</td>
+                                        <td class="py-4 px-6">string</td>
+                                        <td class="py-4 px-6">undefined</td>
+                                        <td class="py-4 px-6">Additional CSS classes</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
+                    <div id="styling" class="mb-12">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Styling</h2>
+                            <p class="text-gray-600 mb-4">The blockquote component can be styled using CSS custom properties:</p>
+                            <pre class="bg-gray-100 p-4 rounded-lg mb-4"><code>.blockquote {
+    --blockquote-border-color: #1a202c;
+    --blockquote-border-width: 4px;
+    --blockquote-padding: 1rem;
+    --blockquote-font-style: italic;
+    --blockquote-text-color: #4a5568;
+}</code></pre>
+                        <p class="text-gray-600">Custom styling example:</p>
+                            <pre class="bg-gray-100 p-4 rounded-lg"><code>.blockquote-elegant {
+    --blockquote-border-color: #4299e1;
+    --blockquote-background: #f7fafc;
+    --blockquote-font-style: normal;
+    --blockquote-author-color: #2b6cb0;
+}</code></pre>
+                    </div>
+
                     <div id="examples" class="mb-12">
                         <h2 class="text-2xl font-semibold text-gray-800 mb-4">Examples</h2>
-                        <div class="border rounded-lg p-4">
-                            <!-- Example implementation here -->
-                            <div class="border rounded-lg">
-                                <button class="w-full px-4 py-3 text-left font-medium">
-                                    Section 1
-                                </button>
-                                <div class="px-4 py-3 border-t">
-                                    Content for section 1
-                                </div>
+                        <div class="space-y-8">
+                                <!-- Example implementations will be shown here -->
+                                <div class="border rounded-lg p-6 space-y-6">
+                                    <h3 class="font-semibold text-gray-800">With Citation</h3>
+                                    <blockquote class="border-l-4 border-gray-800 pl-4 py-2 text-gray-700">
+                                        "In three words I can sum up everything I've learned about life: it goes on."
+                                        <footer class="mt-2">
+                                            <cite class="text-sm text-gray-600">
+                                                — Robert Frost, <span class="italic">The Poetry of Robert Frost</span>
+                                            </cite>
+                                        </footer>
+                                    </blockquote>
+                            </div>
+
+                                <div class="border rounded-lg p-6 space-y-6">
+                                    <h3 class="font-semibold text-gray-800">Nested Quotes</h3>
+                                    <blockquote class="border-l-4 border-gray-800 pl-4 py-2 text-gray-700">
+                                        "Someone once told me:
+                                        <blockquote class="border-l-4 border-gray-400 pl-4 py-2 mt-2 text-gray-600">
+                                            'Life is like a box of chocolates, you never know what you're gonna get.'
+                                        </blockquote>
+                                        And that has always stuck with me."
+                                        <footer class="mt-2 text-sm text-gray-600">— Anonymous</footer>
+                                    </blockquote>
                             </div>
                         </div>
                     </div>
 
                     <div id="accessibility" class="mb-12">
                         <h2 class="text-2xl font-semibold text-gray-800 mb-4">Accessibility</h2>
-                        <p class="text-gray-600">The accordion component follows WAI-ARIA practices for accordion patterns.</p>
+                            <p class="text-gray-600 mb-4">The blockquote component follows these accessibility best practices:</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li>Uses semantic HTML elements (blockquote, cite)</li>
+                                <li>Maintains proper heading hierarchy</li>
+                                <li>Ensures sufficient color contrast</li>
+                                <li>Preserves readability at different zoom levels</li>
+                        </ul>
+                    </div>
+
+                    <div id="best-practices" class="mb-12">
+                        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Best Practices</h2>
+                        <ul class="list-disc list-inside text-gray-600 space-y-4">
+                                <li>Use for significant quotes that add value to the content</li>
+                                <li>Include proper attribution when available</li>
+                                <li>Keep quotes concise and impactful</li>
+                                <li>Use appropriate styling for the context</li>
+                                <li>Consider mobile responsiveness</li>
+                                </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -120,11 +733,15 @@
                     <div class="sticky top-24">
                         <h3 class="text-sm font-semibold text-gray-600 mb-4">ON THIS PAGE</h3>
                         <ul class="space-y-3 text-sm">
+                            <li><a href="#sandbox" class="text-gray-600 hover:text-gray-900">Sandbox</a></li>
                             <li><a href="#overview" class="text-gray-600 hover:text-gray-900">Overview</a></li>
+                            <li><a href="#installation" class="text-gray-600 hover:text-gray-900">Installation</a></li>
                             <li><a href="#usage" class="text-gray-600 hover:text-gray-900">Usage</a></li>
                             <li><a href="#props" class="text-gray-600 hover:text-gray-900">Props</a></li>
+                            <li><a href="#styling" class="text-gray-600 hover:text-gray-900">Styling</a></li>
                             <li><a href="#examples" class="text-gray-600 hover:text-gray-900">Examples</a></li>
                             <li><a href="#accessibility" class="text-gray-600 hover:text-gray-900">Accessibility</a></li>
+                            <li><a href="#best-practices" class="text-gray-600 hover:text-gray-900">Best Practices</a></li>
                         </ul>
                     </div>
                 </div>
@@ -132,7 +749,7 @@
         </main>
     </div>
 
-    <!-- Search Modal (hidden by default) -->
+    <!-- Search Modal -->
     <div id="search-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50">
         <div class="max-w-2xl mx-auto mt-20 p-4">
             <div class="bg-white rounded-lg shadow-xl">
